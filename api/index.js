@@ -80,6 +80,9 @@ app.post("/upload", upload.single("profileImage"), (req, res) => {
   res.setHeader("Content-Type", "application/json");
   res.json({ fileUrl: fileUrl });
 });
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
 
 // Start the Express server on port 8080
 app.listen(process.env.PORT, () => {
